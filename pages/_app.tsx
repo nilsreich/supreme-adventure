@@ -19,9 +19,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <><head>
+    <><Head>
                     <link rel="manifest" href="/manifest.json" />
-    </head>
+    </Head>
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
