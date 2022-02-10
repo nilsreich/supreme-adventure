@@ -15,6 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.load();
+      audioRef.current.play();
     }
     audioRef.current.src = source
   }
