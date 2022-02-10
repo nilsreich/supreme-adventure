@@ -31,7 +31,7 @@ export default function Index() {
             backgroundImage: "url(/heule_eule.webp)"
           }}
         ></div>
-                <div
+        <div
           className="aspect-square bg-cover"
           onClick={() => { updateSong('/fuer_hund_und_katz.ogg'); }}
           style={{
