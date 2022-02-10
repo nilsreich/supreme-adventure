@@ -18,15 +18,24 @@ export default function Index() {
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
-          onClick={() => { updateSong('/blabla.mp3'); }}
+          onClick={() => { updateSong('/grueffelo.ogg'); }}
           style={{
-            backgroundImage: "url('https://www.benjaminbluemchen.de/sites/default/files/styles/teaser_episode_image/public/episode/cd-150.PNG?itok=03nb9dmP')"
+            backgroundImage: "url(/grueffelo.webp)"
           }}
         ></div>
         <div
           className="aspect-square bg-cover"
+          onClick={() => { updateSong('/heule_eule.ogg'); }}
+
           style={{
-            backgroundImage: "url('https://www.benjaminbluemchen.de/sites/default/files/styles/teaser_episode_image/public/episode/cd-150.PNG?itok=03nb9dmP')"
+            backgroundImage: "url(/heule_eule.webp)"
+          }}
+        ></div>
+                <div
+          className="aspect-square bg-cover"          onClick={() => { updateSong('/grueffelo.ogg'); }}
+          onClick={() => { updateSong('/fuer_hund_und_katz.ogg'); }}
+          style={{
+            backgroundImage: "url(/fuer_hund_und_katz.webp)"
           }}
         ></div>
       </div>
