@@ -1,10 +1,9 @@
 import type { AppProps } from 'next/app'
 import '@vercel/examples-ui/globals.css'
-import React, { useRef, useEffect } from 'react';
-import Head from 'next/head'
+import React, { useRef } from 'react';
 
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp() {
   const audioRef = useRef()
 
   const divStyle = {
@@ -18,23 +17,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     audioRef.current.src = source
   }
 
-  const storeCode = '';
-useEffect(() => {
-  if (storeCode) {
-    const manifestElement = document.getElementById("manifest");
-    const manifestString = JSON.stringify({
-      start_url: `\\`,
-    });
-    manifestElement?.setAttribute(
-      "href",
-      "data:application/json;charset=utf-8," + encodeURIComponent(manifestString),
-    );
-  }
-}, [storeCode]);
-
   return (
     <>
-<link rel="manifest" href="/manifest.json" id="manifest"  />
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
