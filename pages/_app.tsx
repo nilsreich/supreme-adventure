@@ -1,6 +1,8 @@
 import type { AppProps } from 'next/app'
 import '@vercel/examples-ui/globals.css'
 import React, { useRef } from 'react';
+import Head from 'next/head'
+
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const audioRef = useRef()
@@ -12,20 +14,32 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   };
 
   const updateSong = (source) => {
-    if (audioRef.current) {
-       // @ts-ignore 
-       audioRef.current.pause();
-       // @ts-ignore
-       audioRef.current.load();
-       // @ts-ignore
-       audioRef.current.play();
-    }
-     // @ts-ignore
+    // @ts-ignore
     audioRef.current.src = source
   }
 
   return (
     <>
+          <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="description" content="Description" />
+        <meta name="keywords" content="Keywords" />
+        <title>Next.js PWA Example</title>
+
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          href="/icons/favicon-16x16.png"
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+        />
+        <meta name="theme-color" content="#317EFB" />
+      </Head>
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
@@ -41,13 +55,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           }}
         ></div>
       </div>
+
       <audio
         ref={audioRef}
         controls
         src=''
         autoPlay
-        className="fixed bottom-0 border-t border-black w-full bg-slate-100"
-      ></audio>      <Component {...pageProps} />
+        className="fixed bottom-0 border-t border-black w-full bg-slate-100 h-12"
+      ></audio>
     </>
   )
 }
