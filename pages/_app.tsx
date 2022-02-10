@@ -3,7 +3,7 @@ import '@vercel/examples-ui/globals.css'
 import React, { useRef } from 'react';
 
 
-export default function MyApp() {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const audioRef = useRef()
 
   const divStyle = {
@@ -18,7 +18,8 @@ export default function MyApp() {
   }
 
   return (
-    <>
+    <>      <Component {...pageProps} />
+
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
