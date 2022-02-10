@@ -33,9 +33,8 @@ useEffect(() => {
 }, [storeCode]);
 
   return (
-    <><Head>
+    <>
 <link rel="manifest" href="/manifest.json" id="manifest"  />
-    </Head>
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
