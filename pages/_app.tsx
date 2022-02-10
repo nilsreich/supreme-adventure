@@ -13,14 +13,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   const updateSong = (source) => {
     if (audioRef.current) {
-      //// @ts-ignore
-      audioRef.current.pause();
-      //// @ts-ignore
+      audioRef.currentasd.pause();
       audioRef.current.load();
-      //// @ts-ignore
       audioRef.current.play();
     }
-    //// @ts-ignore
     audioRef.current.src = source
   }
 
