@@ -19,7 +19,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <>
+    <><head>
+                    <link rel="manifest" href="/manifest.json" />
+    </head>
       <div style={divStyle}>
         <div
           className="aspect-square bg-cover"
@@ -43,7 +45,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         autoPlay
         className="fixed bottom-0 border-t border-black w-full bg-slate-100 h-12"
       ></audio>
-              <link rel="manifest" href="/manifest.json" />
 
     </>
   )
